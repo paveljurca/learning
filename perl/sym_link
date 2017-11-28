@@ -1,0 +1,22 @@
+use strict;
+use warnings;
+
+use File::Basename;
+use File::Spec;
+
+chomp(my $from = <STDIN>);
+chomp(my $to = <STDIN>);
+
+die "hard links not possible for dirs!" if -d $to;
+die "source does not exists!" unless -e $from;
+
+#$to = File::Spec->catfile($to,basename($from)) if -d $to;
+
+my $param = shift @ARGV;
+if ($param =~ /s/) {
+  warn "$!\n" unless symlink($from,$to);
+} else {
+  #warn "$!\n" unless link($from,$to);
+}
+
+#unlink $file;

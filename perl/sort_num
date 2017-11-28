@@ -1,0 +1,18 @@
+use strict;
+use warnings;
+
+chomp(my @nums = <DATA>);
+print sprintf("%10g\xA" x @nums, sort {$a<=>$b} @nums);
+
+__DATA__
+17
+1000
+04
+1.50
+3.1452345
+-10
+1.5
+4
+2001
+90210
+666

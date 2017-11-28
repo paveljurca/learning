@@ -1,0 +1,30 @@
+use strict;
+use warnings;
+use feature 'say';
+
+my %arr = qw/a aa b bb/;
+my $arrRef = \%arr;
+
+#say $arrRef;
+#say ${$arrRef}{a};
+#say $arrRef->{a};
+
+########################################
+# http://qntm.org/files/perl/perl.html #
+########################################
+
+my %account = (
+	  number => 123456,
+	  owners => [{
+	      name => 'Santa Claus',
+	      DOB => 1992,
+    },{
+	      name => "Mickey Mouse",
+      	DOB => 1995,
+    }],
+);
+
+#say $account{owners}->[0]->{name};
+foreach (@{ $account{owners} }) {
+	say $_->{name};
+}

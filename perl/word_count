@@ -1,0 +1,22 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+use utf8;
+
+# FAILING printf's col-width
+# when non-ASCII input/output
+# => FIX
+use open qw(:std :utf8);
+
+my %w;
+#chomp && $w{$_}++ while <>;
+while (<DATA>) {$w{$_}++ for split q[ ]};
+
+printf "%-20s ~ %3sx\n", $_, $w{$_} for (sort {$w{$b}<=>$w{$a}} keys %w);
+
+__DATA__
+          „Máme provádět montáže vzduchotechniky, požárních
+          klapek a trafostanic v prostorech, které
+          neodpovídají standardům. Již jsem 
+          byla nucena zastavit navážení a montáže ventilátorů vzduchotechniky.
+

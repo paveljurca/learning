@@ -1,0 +1,21 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+
+use lib './lib';
+
+#require Hello::World;
+#Hello::World::hello();
+
+#require 'Hello/World.pm';
+#hello();
+
+# 'use' equals to..
+#BEGIN {
+#    require Hello::World;
+#    Hello::World->import('hello');
+#}
+
+use Hello::World 'hello';
+hello;
+

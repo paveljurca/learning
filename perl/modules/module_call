@@ -1,0 +1,40 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+use Data::Dumper;
+#use Data::Dump qw/pp/;
+use 5.010_001;
+
+BEGIN {
+    unshift @INC, q(./lib);
+}
+
+###########################################################
+# https://gist.github.com/paveljurca/9ff826e19f233bb6a6c9 #
+###########################################################
+
+#use lib('./lib');
+#no lib qw(lib);
+
+#$ENV{PERL5LIB}
+
+#say $INC{'Foo/Math.pm'};
+#print Dumper %INC;
+#pp(%INC);
+
+# === PACKAGE call ===
+# http://qntm.org/files/perl/perl.html
+
+use Foo::String::Utils;
+#require Foo::Math;
+use Foo::Math qw/add root/;
+
+## REQUIRE
+#say zombify("i want brains");
+
+## USE
+# 'coz you didnt EXPORTER 'zombify' *.pm
+say Foo::String::Utils::zombify("i want brains");
+
+say add(8,12.5);
+say root(4);

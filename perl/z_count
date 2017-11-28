@@ -1,0 +1,9 @@
+#!/usr/bin/env perl
+use strict;
+use warnings;
+
+my $z_count;
+chomp(my @input = split /\s*/, <STDIN>);
+$_ eq 'z' and $z_count++ for @input;
+
+print $z_count, "\xA";

@@ -1,0 +1,20 @@
+use strict;
+use warnings;
+
+my @func= reverse qw/
+  int
+  rand
+  sleep
+  length
+  hex
+  eof
+  not
+  exit
+  sqrt
+  umask
+/;
+
+# last one
+
+$#func=0;
+system 'perldoc', '-f', $_ for @func;

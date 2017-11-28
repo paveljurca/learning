@@ -1,0 +1,21 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+use 5.010_001;
+
+#require Class;
+require ClassExt;
+
+#my $class = Class->new();
+#&{ ${ $class }{hi} }();
+#$class->{hi}->();
+
+#say ref Class::new('Class');
+#say ref Class->new();
+
+my $class = Class->new();
+my $class_ext = ClassExt->new();
+
+$class->hi();
+$class_ext->hi();
+

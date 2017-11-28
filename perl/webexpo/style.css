@@ -1,0 +1,186 @@
+/* 
+    
+    http://meyerweb.com/eric/tools/css/reset/
+ 
+ */
+
+@font-face 
+{
+font-family: 'Octin';
+src: url('Octin.otf') format('opentype');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face 
+{
+font-family: 'Quicksand';
+src: url('Quicksand.otf') format('opentype');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face 
+{
+font-family: 'Museo';
+src: url('Museo.otf') format('opentype');
+font-weight: normal;
+font-style: normal;
+}
+
+body
+{
+background: #becdd3 url('strip.png') repeat-x fixed;
+font: normal normal 1em "Museo",sans-serif;
+}
+
+#container
+{
+width: 90%;
+margin: 110px 5%;
+}
+
+#header
+{
+width: 100%;
+height: 150px;
+position: fixed;
+top: 0;
+left: 0;
+background: #becdd3 url('strip.png') repeat-x fixed;
+border-bottom: 2px dashed #3ee07b;
+box-shadow: 0 2px 25px #becdd3;
+z-index: 1000;
+}
+
+#program
+{
+width: 90%;
+margin: 180px auto 0 auto;
+}
+
+#header>p
+{
+font-size: 4em;
+font-family: Quicksand;
+text-align: center;
+width: 80%;
+height: 100px;
+margin: 0 auto;
+padding: 25px 0 23px 0;
+/*border-bottom: 2px dashed #3ee07b;*/
+}
+
+#header>p>span
+{
+display:block;
+width: 100%;
+font-size: .4em;
+text-align: center;
+margin-top: .4em;
+}
+
+#talk
+{
+width: 40%;
+height: 140px;
+margin-bottom: 4.5em;
+background: lightblue url('strip2.png') repeat-x;
+box-shadow: 2px 2px 15px #888888;
+font-size: .7em;
+}
+
+#talk:hover
+{
+cursor: pointer;
+box-shadow: 2px 2px 15px red;
+}
+
+#info
+{
+width: 60%;
+margin-left: 25px;
+margin-top: 20px;
+float: left;
+font-size: 1.4em;
+}
+
+#photo
+{
+height: 70px;
+float: left;
+margin-left: 1em;
+margin-top: 35px;
+}
+
+#talk.development
+{
+
+}
+
+#talk.design
+{
+margin-left: auto;
+margin-right: auto;
+}
+
+#talk.business
+{
+margin-left: 60%;
+}
+
+img
+{
+width: 70px;
+height: 70px;
+margin-left: 1em;
+float: left;
+border-radius: 10px;
+border: 1px dashed black;
+}
+
+img.development
+{
+box-shadow: -1px 0 30px darkgreen;
+}
+
+img.design
+{
+box-shadow: -1px 0 30px darkorange;
+}
+
+img.business
+{
+box-shadow: -1px 0 30px dodgerblue;
+}
+
+#info>p
+{
+margin-bottom: .1em;
+}
+
+p.time
+{
+font: normal normal 1.4em "Octin";
+}
+
+p.development
+{
+color: darkgreen;
+}
+
+p.design
+{
+color: darkorange;
+}
+
+p.business
+{
+color: dodgerblue;
+}
+
+span.lecture
+{
+background: yellow;
+font-weight: bold;
+}
